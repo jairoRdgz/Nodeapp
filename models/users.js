@@ -9,7 +9,7 @@ let UserSchema = Schema ({
     username: {type: String,  required: true, min: 8,max: 100},
     identification: {type: String,  required: true, max: 100},
     password: {type: String,  required: true, max: 100},
-    active: {type: String,  required: true, max: 100},
+    active: {type: Boolean,  required: true, max: 100},
     token: {type: String,  required: false, max: 100},
     vehicules: [
         { type: Schema.Types.ObjectId, ref: 'Vehicule' }
