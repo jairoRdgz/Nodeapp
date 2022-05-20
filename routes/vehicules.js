@@ -6,8 +6,8 @@ const validate = require("../middleware/validate")
 const auth = require("../middleware/auth");  
 
 /* vehicles listing. */
-router.post('/',auth, validate(schemas.vehicule), VehiculeController.create);
-router.get('/', auth, VehiculeController.index);
+router.post('/vehiclesAdd',auth, validate(schemas.vehicule), VehiculeController.create);
+router.get('/vehicles', auth, VehiculeController.index);
 router.get('/:id', auth, VehiculeController.show);
 router.put('/:id', auth, VehiculeController.update);
 router.delete('/:id', auth, VehiculeController.delete);

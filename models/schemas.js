@@ -11,13 +11,13 @@ const schemas = {
     token: [Joi.string(), Joi.number()]
   }),
 
-  vehicule: Joi.object().keys({
-    type: Joi.string().alphanum().min(3).max(10).required(),
+    vehicule: Joi.object().keys({
+    type:  Joi.string().alphanum().min(3).max(10).required(),
     brand: Joi.string().alphanum().min(3).max(10).required(),
     model: Joi.string().alphanum().min(3).max(10).required(),
-    year: Joi.string().alphanum().min(3).max(10).required(),
+    year:  Joi.string().alphanum().min(3).max(10).required(),
     plate: Joi.string().alphanum().min(6).max(6).required(),
-    owner: Joi.string().alphanum().min(6).required(),
+    owner: Joi.string().alphanum().min(6).required()
   })
 }
 

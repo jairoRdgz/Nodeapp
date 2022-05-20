@@ -31,11 +31,6 @@ exports.index = (req, res, next) => {
 }
 
 exports.show = (req, res, next) => {
-    // Vehicule.findById(req.params.id, (err, Vehicule) => {
-    //     if (err)
-    //         return next(err) 
-    //     res.send(Vehicule)
-    // } )
     Vehicule.findById(req.params.id)
          .then(vehicule => {
              if(vehicule == null){
